@@ -14,11 +14,11 @@ typedef struct
     int type;                       // 0 -- h.264; 1 -- h.265
     unsigned int num;               // 序号
     unsigned int len;               // 含起始码的总的长度
-    unsigned int offset;       // nal包在文件中的偏移
-    int sliceType;               // 帧类型
-    int nalType;            // NAL类型
-    int startcodeLen;             // start code长度
-    char startcodeBuffer[16];         // 起始码，字符串形式
+    unsigned int offset;			// nal包在文件中的偏移
+    int sliceType;					// 帧类型
+    int nalType;					// NAL类型
+    int startcodeLen;				// start code长度
+    char startcodeBuffer[16];       // 起始码，字符串形式
 } NALU_t;
 
 typedef struct 

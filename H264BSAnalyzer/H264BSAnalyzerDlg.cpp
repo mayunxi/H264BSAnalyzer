@@ -555,6 +555,7 @@ void CH264BSAnalyzerDlg::ReadFile(void)
 
     while (true)
     {
+		//等待文件打開信号
         WaitForSingleObject(m_hFileLock, INFINITE);
 
         m_cParser.probeNALU(m_vNalTypeVector, nMaxNalNum);
@@ -1000,6 +1001,7 @@ void CH264BSAnalyzerDlg::OnFileOpen()
     }
     fclose(fp);
 
+	//初始化解析器并打开文件
     int ret = m_cParser.init(m_strFileUrl.GetBuffer(), &m_cTree);
     if (ret < 0)
     {

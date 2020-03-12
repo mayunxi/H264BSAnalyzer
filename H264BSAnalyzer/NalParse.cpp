@@ -31,7 +31,7 @@ int CNalParser::init(const char* filename, CTreeCtrl* tree)
 {
     m_filename = filename;
 
-    // judge file 
+    // judge file 判断文件类型
     m_nType = judeVideoFile(m_filename);
 
     if (m_nType == FILE_UNK)
