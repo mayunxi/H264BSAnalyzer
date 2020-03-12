@@ -132,7 +132,7 @@ int CNalParser::probeNALU(vector<NALU_t>& vNal, int num)
 
 int CNalParser::parseNALU(NALU_t& vNal, char** naluData, char** naluInfo)
 {
-    if (m_naluData == NULL)
+    if (m_naluData != NULL)
     {
         free(m_naluData);
         m_naluData = NULL;
